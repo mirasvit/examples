@@ -1,0 +1,22 @@
+<h1 style="color:#f1703d"> Mirasvit Alert Widget Example</h2>
+
+<div id="modal">
+    <div id="msg" style="display: none">Modal contents</div>
+    <button class="modalRun">Run action</button>
+</div>
+
+<script language="JavaScript">
+require([
+    'jquery',
+    'Magento_Ui/js/modal/alert'
+    ],
+    function($, alert) {
+        $('#modal').on('click', 'button.modalRun', function(event){
+            event.preventDefault();
+            alert({
+                content: $(event.target).parent().children('#msg').text()
+            })
+        })
+    }
+);
+</script>
