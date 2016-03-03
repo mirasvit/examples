@@ -1,4 +1,4 @@
-composer config repositories.mirasvit-blog vcs https://bitbucket.org/mirasvit/module-example
+composer config repositories.mirasvit-example vcs git@bitbucket.org:mirasvit/module-example.git
 composer require mirasvit/module-example:dev-master
 
 bin/magento setup:upgrade
