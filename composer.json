@@ -11,5 +11,13 @@
     "version": "0.0.1-alpha1",
     "license": [
       "proprietary"
-    ]
+    ],
+    "autoload": {
+        "files": [
+            "src/Example/registration.php"
+        ],
+        "psr-4": {
+            "Mirasvit\\Example\\": "src/Example"
+        }
+    }
 }
