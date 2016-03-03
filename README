@@ -1,0 +1,7 @@
+composer config repositories.mirasvit-blog vcs https://bitbucket.org/mirasvit/module-example
+composer require mirasvit/module-example:dev-master
+
+bin/magento setup:upgrade
+
+rm -rf pub/static/*; rm -rf var/view_preprocessed/*;
+bin/magento setup:static-content:deploy
