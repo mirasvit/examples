@@ -1,7 +1,8 @@
 composer config repositories.mirasvit-example vcs git@bitbucket.org:mirasvit/module-example.git
 composer require mirasvit/module-example:dev-master
 
+enable module in app/etc/config.php
+
 bin/magento setup:upgrade
 
 rm -rf pub/static/*; rm -rf var/view_preprocessed/*;
-bin/magento setup:static-content:deploy
