@@ -3,7 +3,7 @@
     <menu>
         <add id="Mirasvit_Example::example" title="Mirasvit Example" module="Mirasvit_Example" sortOrder="700"
              resource="Mirasvit_Example::example" parent="Magento_Backend::content" />
-        <add id="Mirasvit_Example::example_alert" title="Modal Widget Example" module="Mirasvit_Example" sortOrder="10"
+        <add id="Mirasvit_Example::example_alert" title="Alert Widget Example" module="Mirasvit_Example" sortOrder="10"
              resource="Mirasvit_Example::example_alert" parent="Mirasvit_Example::example" action="example/alert" />
     </menu>
 </config>
