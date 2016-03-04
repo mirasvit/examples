@@ -2,10 +2,21 @@
 
 namespace Mirasvit\Example\Block\Adminhtml;
 
-class Post extends \Magento\Framework\View\Element\Template
+use Magento\Backend\Block\Template;
+use Magento\Backend\Block\Template\Context;
+
+class Alert extends Template
 {
-    public function _prepareLayout()
+    protected $_template = "alert.phtml";
+
+    public function __construct(
+        Context $context
+    ) {
+        parent::__construct($context);
+    }
+
+    protected function _isAllowedAction($resourceId)
     {
-        return parent::_prepareLayout();
+        return $this->_authorization->isAllowed();
     }
 }
