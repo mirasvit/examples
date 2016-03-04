@@ -1,6 +1,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
       layout="admin-1column">
+    <head>
+        <script src="Mirasvit_Example::js/alert-test.js"/>
+    </head>
     <body>
         <referenceContainer name="content">
             <block class="Mirasvit\Example\Block\Adminhtml\Alert" name="example_alert" template="alert.phtml">

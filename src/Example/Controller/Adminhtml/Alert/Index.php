@@ -35,7 +35,6 @@ class Index extends \Magento\Backend\App\Action
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Mirasvit_Example::example_alert');
-        $resultPage->getConfig()->getTitle()->prepend(__('Alert Widget Example'));
 
         return $resultPage;
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0"  encoding="UTF-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Mirasvit_Example::example" title="Mirasvit Examples" module="Mirasvit_Example" sortOrder="700"
+        <add id="Mirasvit_Example::example" title="Mirasvit Examples" module="Mirasvit_Example" sortOrder="50"
              resource="Mirasvit_Example::example" />
         <add id="Mirasvit_Example::example_alert" title="Alert Widget Example" module="Mirasvit_Example" sortOrder="10"
              resource="Mirasvit_Example::example_alert" parent="Mirasvit_Example::example" action="example/alert" />
