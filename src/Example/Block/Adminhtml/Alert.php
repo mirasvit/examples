@@ -17,6 +17,6 @@ class Alert extends Template
 
     protected function _isAllowedAction($resourceId)
     {
-        return $this->_authorization->isAllowed();
+        return $this->_authorization->isAllowed($resourceId);
     }
 }
