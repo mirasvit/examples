@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+      layout="admin-1column">
+    <head>
+        <css src="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" src_type="url" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Mirasvit\Example\Block\Adminhtml\Widgets" name="example_widgets" template="widgets.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

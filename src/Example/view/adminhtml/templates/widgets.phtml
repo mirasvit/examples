@@ -1,0 +1,125 @@
+<h1 style="color:#f1703d"> Magento UI Widgets Example</h2>
+
+<style>
+    .ui-menu {
+        width: 200px;
+    }
+</style>
+
+<div id="accordion">
+    <h3>Autocomplete test</h3>
+    <div>
+        <input type="text" value="" class="selector" placeholder="Type something">
+    </div>
+    <h3>Datepicker test</h3>
+    <div>
+        <div id="datepicker"></div>
+    </div>
+    <h3>Progress Bar test</h3>
+    <div>
+        <div id="progressbar"></div>
+    </div>
+    <h3>Spinner test</h3>
+    <div>
+        <div>
+            <input type="text" value="" class="spintest">
+        </div>
+    </div>
+
+    <h3>Dialog test</h3>
+    <div>
+        <button>Show Dialog</button>
+        <div id="dialog-test" title="Dialog Title">I'm a dialog</div>
+    </div>
+
+    <h3>Confirmation test</h3>
+    <div>
+
+    </div>
+</div>
+
+    <script language="JavaScript">
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, accordion) {
+            $("#accordion").accordion({
+                heightStyle: "content"
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, autocomplete) {
+            $( ".selector" ).autocomplete({
+                source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, datepicker) {
+            $.datepicker.setDefaults({
+                showOn: "both",
+                buttonImageOnly: true,
+                buttonImage: "calendar.gif",
+                buttonText: "Calendar"
+            });
+            $("#datepicker").datepicker();
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, spinner) {
+            $(".spintest").spinner();
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, progressbar) {
+            $("#progressbar").progressbar({
+                value: 37
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, dialog) {
+            $( "#dialog-test" ).dialog({ autoOpen: false });
+            $( "#dialog-opener" ).click(function() {
+                $( "#dialog-test" ).dialog( "open" );
+            });        }
+    );
+
+    require([
+        'Magento_Ui/js/modal/confirm'
+    ], function(confirmation) {
+
+        confirmation({
+            title: 'Choose one',
+            content: 'Confirm or Cancel',
+            actions: {
+                confirm: function(){alert('Confirmed');},
+                cancel: function(){ alert('Cancelled');},
+                always: function(){} // Executed regardless of selection
+            }
+        });
+
+    });
+</script>

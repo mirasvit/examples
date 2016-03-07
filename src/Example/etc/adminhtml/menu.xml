@@ -5,5 +5,7 @@
              resource="Mirasvit_Example::example" />
         <add id="Mirasvit_Example::example_alert" title="Alert Widget Example" module="Mirasvit_Example" sortOrder="10"
              resource="Mirasvit_Example::example_alert" parent="Mirasvit_Example::example" action="example/alert" />
+        <add id="Mirasvit_Example::example_widgets" title="Widgets Example" module="Mirasvit_Example" sortOrder="20"
+             resource="Mirasvit_Example::example_widgets" parent="Mirasvit_Example::example" action="example/widgets" />
     </menu>
 </config>
