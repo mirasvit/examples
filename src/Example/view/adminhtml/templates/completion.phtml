@@ -1,0 +1,52 @@
+<h1 style="color:#f1703d"> Mirasvit Advanced Data Entering Example</h1>
+
+<br>
+
+<h2>Text Input with Predefined Autocompletion</h2>
+
+<input type="text" value="" class="selector" placeholder="Type something">
+
+<br><br>
+
+<h2>Date Input with Calendar picker</h2>
+
+<input type="text" id="calendar-test">
+
+<div id="datepicker"></div>
+
+<br><br>
+
+<h2>Quick Search</h2>
+
+
+
+<script language="JavaScript">
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, autocomplete) {
+            $( ".selector" ).autocomplete({
+                source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, datepicker) {
+            $.datepicker.setDefaults({
+                showOn: "both",
+                buttonImageOnly: false,
+                buttonImage: "calendar.gif",
+                buttonText: "Calendar",
+                altField: "#calendar-test",
+                altFormat: "yy-mm-dd"
+            });
+            $("#datepicker").datepicker();
+        }
+    );
+
+</script>

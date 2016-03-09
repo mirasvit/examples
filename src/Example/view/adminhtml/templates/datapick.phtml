@@ -1,0 +1,86 @@
+<h1 style="color:#f1703d"> Mirasvit Basic Data Entering Example</h1>
+
+<style>
+    #slidetest { margin: 10px; }
+</style>
+
+<br>
+
+<h2>Spinner</h2>
+
+<input type="text" value="" class="spintest">
+
+<br><br>
+
+<h2>Slider</h2>
+
+<div id="slidetest"></div>
+
+<br><br>
+
+<h2>Progress Bar</h2>
+
+<div id="progressbar"></div>
+
+<br><br>
+
+<h2>Prompt Request</h2>
+
+<input type="button" value="Prompt Me" id="promptTest">
+
+<script>
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, spinner) {
+            $(".spintest").spinner();
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, slider) {
+            $("#slidetest").slider();
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui',
+        ],
+        function($, progressbar) {
+            $("#progressbar").progressbar({
+                value: 37
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'Magento_Ui/js/modal/prompt',
+        ],
+        function($, prompt) {
+            $("#promptTest").click(function(){
+                prompt({
+                    title: 'Data Request',
+                    content: 'Please, confirm your data',
+                    actions: {
+                        confirm: function(){
+                            alert('Confirmed');
+                        },
+                        cancel: function(){
+                            alert('Cancelled');
+                        },
+                        always: function(){}
+                    }
+                });
+            });
+        }
+    );
+
+</script>
+
+

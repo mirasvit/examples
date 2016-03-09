@@ -1,6 +1,6 @@
 <?php
 
-namespace Mirasvit\Example\Controller\Adminhtml\Alert;
+namespace Mirasvit\Example\Controller\Adminhtml\Navigation;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -34,7 +34,7 @@ class Index extends \Magento\Backend\App\Action
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Mirasvit_Example::example_alert');
+        $resultPage->setActiveMenu('Mirasvit_Example::example_navigation');
 
         return $resultPage;
     }
@@ -44,7 +44,7 @@ class Index extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Mirasvit_Example::example_alert');
+        return $this->_authorization->isAllowed('Mirasvit_Example::example_navigation');
     }
 
 

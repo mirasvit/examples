@@ -3,9 +3,19 @@
     <menu>
         <add id="Mirasvit_Example::example" title="Mirasvit Examples" module="Mirasvit_Example" sortOrder="50"
              resource="Mirasvit_Example::example" />
-        <add id="Mirasvit_Example::example_alert" title="Alert Widget Example" module="Mirasvit_Example" sortOrder="10"
+        <add id="Mirasvit_Example::example_tabbed" title="Tabbed Layout Example" module="Mirasvit_Example" sortOrder="10"
+             resource="Mirasvit_Example::example_tabbed" parent="Mirasvit_Example::example" action="example/tabbed" />
+        <add id="Mirasvit_Example::example_navigation" title="Navigation Widgets Example" module="Mirasvit_Example" sortOrder="20"
+             resource="Mirasvit_Example::example_navigation" parent="Mirasvit_Example::example" action="example/navigation" />
+        <add id="Mirasvit_Example::example_datapick" title="Data Entering Example" module="Mirasvit_Example" sortOrder="30"
+             resource="Mirasvit_Example::example_datapick" parent="Mirasvit_Example::example" action="example/datapick" />
+        <add id="Mirasvit_Example::example_completion" title="Advanced Data Picking Example" module="Mirasvit_Example" sortOrder="40"
+             resource="Mirasvit_Example::example_completion" parent="Mirasvit_Example::example" action="example/completion" />
+        <add id="Mirasvit_Example::example_alert" title="Messaging Example" module="Mirasvit_Example" sortOrder="50"
              resource="Mirasvit_Example::example_alert" parent="Mirasvit_Example::example" action="example/alert" />
-        <add id="Mirasvit_Example::example_widgets" title="Widgets Example" module="Mirasvit_Example" sortOrder="20"
-             resource="Mirasvit_Example::example_widgets" parent="Mirasvit_Example::example" action="example/widgets" />
+        <add id="Mirasvit_Example::example_dialogs" title="Complex Dialog Boxes Example" module="Mirasvit_Example" sortOrder="60"
+             resource="Mirasvit_Example::example_dialogs" parent="Mirasvit_Example::example" action="example/dialogs" />
+        <add id="Mirasvit_Example::example_loader" title="Just-in-Time Loading Example" module="Mirasvit_Example" sortOrder="70"
+             resource="Mirasvit_Example::example_loader" parent="Mirasvit_Example::example" action="example/loader" />
     </menu>
 </config>

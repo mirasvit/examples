@@ -1,0 +1,81 @@
+<h1 style="color:#f1703d"> Mirasvit Tabbed Interface Example</h1>
+
+<br>
+
+<h2>Vertical Tabbed Interface using Accordion Widget</h2>
+
+<div id="vertical_tabs">
+    <h3>What is Integration</h3>
+    <div>An integration enables third-party services to call the Magento web APIs. The Magento APIs currently supports Accounting,
+        Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Product Information Management (PIM), and
+        marketing automation systems out of the box. </div>
+
+    <h3>What is Redis</h3>
+    <div>Redis is an optional backend cache solution to replace Zend_Cache_Backend_File, which is used in Magento 2 by default.</div>
+
+    <h3>What is Varnish</h3>
+    <div>Varnish Cache is an open source web application accelerator (also referred to as an HTTP accelerator or caching HTTP
+        reverse proxy). Varnish stores (or caches) files or fragments of files in memory; this enables Varnish to reduce the response
+        time and network bandwidth consumption on future, equivalent requests. Unlike web servers like Apache and nginx,
+        Varnish was designed for use exclusively with the HTTP protocol.
+
+        Magento 2 supports Varnish versions 3.0.5 or later or any Varnish 4.x version.
+    </div>
+</div>
+
+<br><br>
+<h2>Single Collapsible Widget</h2>
+
+<div id="single_collapse">
+    <div data-mage-init='{"collapsible":{ "active": false, "animate": 200, "collapsible": true}}'>
+        <div data-role="title">Description</div>
+        <div data-role="content" style="margin : 5px; border: 1px dashed; background-color: lightgrey">
+            The Magento collapsible widget converts a header/content pair into an accordion, where the content is collapsed or expanded on the header click.
+
+            Unlike the accordion widget is that collapsible is initialized for one title/content pair, while accordion can be initialized for a set of title/contents pairs.        </div>
+    </div>
+</div>
+
+<br><br>
+<h2>Horizontal Tabbed Interface</h2>
+
+<div id="horizontal_tabs">
+    <ul>
+        <li><a href="#fragment-1"><span>Accordion</span></a></li>
+        <li><a href="#fragment-2"><span>Collapsible</span></a></li>
+        <li><a href="#fragment-3"><span>Tabs</span></a></li>
+    </ul>
+    <div id="fragment-1">
+        <p>Magento accordion widget is an extension of the Magento Tabs widget. Accordions are generally used to break content into multiple sections that can be swapped to save space</p>
+    </div>
+    <div id="fragment-2">
+        <p>The Magento collapsible widget converts a header/content pair into an accordion, where the content is collapsed or expanded on the header click.</p>
+
+        <p>Unlike the accordion widget is that collapsible is initialized for one title/content pair, while accordion can be initialized for a set of title/contents pairs.</p>
+    </div>
+    <div id="fragment-3">
+        <p>The Magento tabs widget implements single content area with multiple panels, each associated with a header in a list. It uses the Magento collapsible widget.</p>
+    </div>
+</div>
+
+<script language="JavaScript">
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, accordion) {
+            $("#vertical_tabs").accordion({
+                heightStyle: "content"
+            });
+        }
+    );
+
+    require([
+            'jquery',
+            'jquery/ui'
+        ],
+        function($, tabs) {
+            $("#horizontal_tabs").tabs();
+        }
+    );
+</script>
