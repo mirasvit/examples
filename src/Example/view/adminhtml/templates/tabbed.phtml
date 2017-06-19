@@ -57,25 +57,3 @@
         <p>The Magento tabs widget implements single content area with multiple panels, each associated with a header in a list. It uses the Magento collapsible widget.</p>
     </div>
 </div>
-
-<script language="JavaScript">
-    require([
-            'jquery',
-            'jquery/ui'
-        ],
-        function($, accordion) {
-            $("#vertical_tabs").accordion({
-                heightStyle: "content"
-            });
-        }
-    );
-
-    require([
-            'jquery',
-            'jquery/ui'
-        ],
-        function($, tabs) {
-            $("#horizontal_tabs").tabs();
-        }
-    );
-</script>
