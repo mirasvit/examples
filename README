@@ -1,4 +1,4 @@
-composer config repositories.mirasvit-example vcs git@bitbucket.org:mirasvit/module-example.git
+composer config repositories.mirasvit-example vcs git@github.com:mirasvit/module-example.git
 composer require mirasvit/module-example:dev-master
 
 enable module in app/etc/config.php
