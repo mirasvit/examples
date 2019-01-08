@@ -6,3 +6,4 @@ enable module in app/etc/config.php
 bin/magento setup:upgrade
 
 rm -rf pub/static/*; rm -rf var/view_preprocessed/*;
+
